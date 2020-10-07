@@ -34,6 +34,15 @@ cat part.txt | python 21mapper.py | sort
 cat part.txt | python 21mapper.py | sort  | python 22reducer.py
 
 ```
+## Bonus: Top 5 fileds
+
+```
+Amex	37127.99
+Cash	41137.759999999995
+Discover	44915.03
+MasterCard	41816.22000000002
+Visa	45412.13000000003
+```
 
 ## References
 

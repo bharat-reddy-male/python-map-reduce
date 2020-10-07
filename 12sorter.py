@@ -15,4 +15,3 @@ with open("payment-type.txt", "r") as unsorted:
     for line in dataList:
       sorted.write(line)  # output
       print (line)        # display to console
-

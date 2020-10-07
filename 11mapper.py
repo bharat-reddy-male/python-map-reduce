@@ -17,4 +17,3 @@ with open("purchases.txt", "r") as input:
 
         # display to console (not required - just for the user)
         print(paymentType + "\t" + amount + "\n")
-

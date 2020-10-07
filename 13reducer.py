@@ -2,8 +2,8 @@
 # Easy to test
 # Not quite Hadoop-ready
 
-with open("output12sorted.txt","r") as sorted:
-  with open("output13reduced.txt", "w") as output:
+with open("payment-type-sorted.txt","r") as sorted:
+  with open("payment-type-reduced.txt", "w") as output:
 
     thisKey = ""
     thisValue = 0.0
@@ -11,16 +11,16 @@ with open("output12sorted.txt","r") as sorted:
     for line in sorted:
       datalist = line.strip().split('\t')
       if (len(datalist) == 2) : 
-        store, amount = datalist
+        paymentType, amount = datalist
 
-        if store != thisKey:
+        if paymentType != thisKey:
           if thisKey:
             # output the previous key-summaryvalue result
             output.write(thisKey + '\t' + str(thisValue)+'\n')
             print(thisKey + '\t' + str(thisValue)+'\n')
 
           # start over for each new key
-          thisKey = store 
+          thisKey = paymentType 
           thisValue = 0.0
   
         # apply the aggregation function

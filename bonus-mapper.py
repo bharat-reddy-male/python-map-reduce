@@ -6,9 +6,9 @@ with open("payment-type.txt", "r") as input:
 
     # iterate through each line in the file object
     for line in input:
-      datalist = line.strip().split("    ")
+      datalist = line.strip().split("\t")
       if (len(datalist) == 2) : 
-        amount, paymentType = datalist
+        paymentType, amount = datalist
 
         # output intermediate key-value pairs
         output.write(paymentType + "\t" + amount + "\n")
